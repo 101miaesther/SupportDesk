@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.9818 0.0054 95.0986);
+  --foreground: oklch(0.1450 0 0);
+  --card: oklch(0.9818 0.0054 95.0986);
+  --card-foreground: oklch(0.1450 0 0);
+  --popover: oklch(1.0000 0 0);
+  --popover-foreground: oklch(0.2671 0.0196 98.9390);
+  --primary: oklch(0.7040 0.0400 256.7880);
+  --primary-foreground: oklch(1.0000 0 0);
+  --secondary: oklch(0.8690 0.0220 252.8940);
+  --secondary-foreground: oklch(0.3720 0.0440 257.2870);
+  --muted: oklch(0.9230 0.0030 48.7170);
+  --muted-foreground: oklch(0.5530 0.0130 58.0710);
+  --accent: oklch(0.9245 0.0138 92.9892);
+  --accent-foreground: oklch(0.2333 0.0195 275.9526);
+  --destructive: oklch(0.1908 0.0020 106.5859);
+  --destructive-foreground: oklch(1.0000 0 0);
+  --border: oklch(0.8690 0.0050 56.3660);
+  --input: oklch(0.9220 0 0);
+  --ring: oklch(0.5540 0.0460 257.4170);
+  --status-new: oklch(0.55 0.18 255);
+  --status-progress: oklch(0.70 0.15 70);
+  --status-resolved: oklch(0.65 0.17 145);
+  --status-cancelled: oklch(0.55 0.01 90);
+  --radius: 0.5rem;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.dark {
+  /* dark green, in place of tweakcn's default olive-brown dark */
+  --background: oklch(0.19 0.03 155);
+  --foreground: oklch(0.92 0.01 130);
+  --card: oklch(0.23 0.035 155);
+  --card-foreground: oklch(0.95 0.01 120);
+  --popover: oklch(0.23 0.035 155);
+  --popover-foreground: oklch(0.92 0.01 130);
+  --primary: oklch(0.90 0.058 230.9);
+  --primary-foreground: oklch(0.145 0 0);
+  --secondary: oklch(0.30 0.03 155);
+  --secondary-foreground: oklch(0.95 0.01 120);
+  --muted: oklch(0.25 0.025 155);
+  --muted-foreground: oklch(0.70 0.02 130);
+  --accent: oklch(0.30 0.04 150);
+  --accent-foreground: oklch(0.95 0.01 120);
+  --destructive: oklch(0.6368 0.2078 25.3313);
+  --destructive-foreground: oklch(1.0000 0 0);
+  --border: oklch(0.35 0.03 155 / 40%);
+  --input: oklch(0.35 0.03 155);
+  --ring: oklch(0.70 0.03 155);
+  --status-new: oklch(0.65 0.15 250);
+  --status-progress: oklch(0.75 0.14 70);
+  --status-resolved: oklch(0.70 0.16 145);
+  --status-cancelled: oklch(0.65 0.01 100);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-status-new: var(--status-new);
+  --color-status-progress: var(--status-progress);
+  --color-status-resolved: var(--status-resolved);
+  --color-status-cancelled: var(--status-cancelled);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
