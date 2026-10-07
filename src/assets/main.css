@@ -32,7 +32,6 @@
 }
 
 .dark {
-  /* dark green, in place of tweakcn's default olive-brown dark */
   --background: oklch(0.19 0.03 155);
   --foreground: oklch(0.92 0.01 130);
   --card: oklch(0.23 0.035 155);

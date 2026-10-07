@@ -15,7 +15,7 @@ import BaseButton from '@/components/BaseButton.vue'
     <div class="flex w-full flex-col items-start gap-6 text-left lg:w-1/2">
       <h1 class="text-3xl font-bold text-gray-500">SupportDesk</h1>
       <p class="max-w-md text-gray-600">
-        Have an issue? Submit a ticket and we'll get back to you. Already have a reference code? Track its status below.
+        Have an issue? Submit a ticket and we'll get back to you.Already have a reference code? Track its status below.
       </p>
       <div class="flex gap-4">
         <RouterLink to="/submit">

@@ -5,7 +5,7 @@ import { useAuthStore } from '@/stores/auth'
 import BaseButton from '@/components/BaseButton.vue'
 import FormField from '@/components/FormField.vue'
 
-const { login } = useAuthStore()
+const authStore = useAuthStore()
 const router = useRouter()
 const route = useRoute()
 
